@@ -13,6 +13,14 @@ $ helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/n
     --set nfs.path=/mnt/nfs_share
 ```
 
+# Metrics server
+We are using kubernetes default metrics server
+To install the metrics server we can download the file below.
+```
+wget https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
+Add the `--kubelet-insecure-tls` parameter to the command line of the deployment
+
 # How to get inside cqlsh
 1. Create a pod from the openjdk image.
 2. Install python on it.
