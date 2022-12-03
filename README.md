@@ -1,6 +1,19 @@
 # Kind command to initialize a kubernetes cluster
+
+kind config
 ```
-kind create cluster --name mycluster
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+- role: worker
+- role: worker
+```
+command
+```
+kind create cluster --name mycluster --config kind.yaml
 ```
 
 # NFS server setup
